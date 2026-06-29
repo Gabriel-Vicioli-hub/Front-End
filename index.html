@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raízes do Nordeste</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🌵 Raízes do Nordeste</h1>
+<p>Sabores que conectam tradição e tecnologia</p>
+</header>
+
+<div id="lgpd">
+<p>
+Este sistema utiliza seus dados para autenticação e processamento de pedidos conforme a LGPD.
+</p>
+<button onclick="aceitarLGPD()">Aceitar</button>
+</div>
+
+<section id="auth">
+
+<h2>Login / Cadastro</h2>
+
+<input type="text" id="nome" placeholder="Nome">
+
+<input type="email" id="email" placeholder="E-mail">
+
+<input type="password" id="senha" placeholder="Senha">
+
+<button onclick="cadastrar()">Cadastrar</button>
+
+<button onclick="login()">Entrar</button>
+
+<p id="usuarioLogado"></p>
+
+</section>
+
+<section>
+
+<h2>Promoções</h2>
+
+<div class="promo">
+🔥 Combo Nordestino - 15% OFF
+</div>
+
+<div class="promo">
+🥥 Tapioca + Suco = R$ 20
+</div>
+
+</section>
+
+<section>
+
+<h2>Escolha a Unidade</h2>
+
+<select id="unidade" onchange="carregarCardapio()">
+<option value="osasco">Osasco</option>
+<option value="barueri">Barueri</option>
+<option value="sp">São Paulo</option>
+</select>
+
+</section>
+
+<section>
+
+<h2>Pesquisar Produto</h2>
+
+<input
+type="text"
+id="pesquisa"
+placeholder="Digite o nome..."
+onkeyup="filtrarProdutos()">
+
+</section>
+
+<section>
+
+<h2>Cardápio</h2>
+
+<div id="cardapio"></div>
+
+</section>
+
+<section>
+
+<h2>Carrinho</h2>
+
+<ul id="carrinho"></ul>
+
+<h3 id="total">Total: R$ 0</h3>
+
+<button onclick="finalizarPedido()">
+Finalizar Pedido
+</button>
+
+</section>
+
+<section>
+
+<h2>Programa de Fidelidade</h2>
+
+<p id="pontos">
+Pontos acumulados: 0
+</p>
+
+</section>
+
+<section>
+
+<h2>Histórico de Pedidos</h2>
+
+<ul id="historico"></ul>
+
+</section>
+
+<section>
+
+<h2>Status do Pedido</h2>
+
+<div id="statusPedido"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
